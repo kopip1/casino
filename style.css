@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+body {
+    background: radial-gradient(circle, #1b1b1b, #000);
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.casino {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    width: 380px;
+    text-align: center;
+    box-shadow: 0 0 25px gold;
+}
+
+h1 {
+    margin-bottom: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+.info {
+    font-size: 13px;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.prizes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.card {
+    background: linear-gradient(135deg, #333, #222);
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid gold;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.zonk {
+    color: red;
+    font-weight: bold;
+}
+
+button {
+    background: gold;
+    color: #000;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: orange;
+    transform: scale(1.1);
+}
+
+button:disabled {
+    background: gray;
+    cursor: not-allowed;
+}
+
+#gachaBtn.shake {
+    animation: shake 0.5s;
+}
+
+#result {
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px gold; }
+    to { text-shadow: 0 0 20px gold; }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(0); }
+}
